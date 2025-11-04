@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
         actionPanel.innerHTML = '';
 
         if (currentStep.onSuccess) {
-            setTimeout(currentStep.onSuccess, 2000);
+            setTimeout(currentStep.onSuccess, 5000);
         }
 
         if (stepPath !== "start_menu" && historyStack.length > 1) {
