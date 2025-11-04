@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT-Летопись: Интерактивное портфолио</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Левая панель (Сайдбар) -->
+        <div class="sidebar">
+            <div class="signature">
+                <pre class="art-text hallow">༻ Hallow ༺</pre>
+                <pre class="art-text saint">―( Sarcastic Saint )―</pre>
+            </div>
+            
+            <div class="sidebar-section">
+                <h4>Обо мне</h4>
+                <p>
+                    Я — IT-инженер, практик, специализирующийся на self-hosted инфраструктуре (Linux/Windows, Docker, Nginx).
+				</p>
+                 <p>
+					Этот сайт — точка входа в мою экосистему и R&D-песочницу, где я фиксирую свой опыт, решаю инженерные задачи и развиваю свой self-hosted стек.
+                </p>
+				<p>
+					В основе моей экосистемы лежит профильное образование с отличием и практический опыт в сфере IT-обслуживания и администрирования.
+                </p>
+            </div>
+
+            <div class="sidebar-section">
+                <h4>Мои Проекты и Ресурсы</h4>
+                <ul>
+                    <li><a href="https://dashy.hub-leo.ru/" target="_blank">Главный Дашборд (Dashy)</a></li>
+                    <li><a href="https://hub-leo.ru" target="_blank">Nextcloud (Приватное облако)</a></li>
+                    <li><a href="https://snipe.hub-leo.ru/" target="_blank">Snipe-IT (Учет IT-активов)</a></li>
+                    <li><a href="https://blog.hub-leo.ru/" target="_blank">Мой Блог (WordPress)</a></li>
+                    <li><a href="https://files.hub-leo.ru/" target="_blank">Файловый архив (HFS)</a></li>
+                    <li><a href="https://anilist.hub-leo.ru/" target="_blank">Каталог Аниме (Flask)</a></li>
+                    <li><a href="https://mistworld.hub-leo.ru/" target="_blank">Игровые проекты (L2/MC)</a></li>
+                    <li><a href="https://wiki.hub-leo.ru/" target="_blank">База знаний (DokuWiki)</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section easter-egg" onclick="showJoke()">
+                <h4>[Секретный протокол #42]</h4>
+                <pre class="motto">... Да пребудет с вами хоть что нибудь ...</pre>
+            </div>
+        </div>
+
+        <!-- Правая панель (Основной экран симулятора) -->
+        <div class="main-content">
+            <div id="quest-screen"></div>
+            <div id="action-panel"></div>
+        </div>
+    </div>
+
+    <!-- СКРЫТЫЙ ЭКРАН ДИАГНОСТИКИ ("Артефакт") -->
+    <div id="scan-modal" class="modal" onclick="hideSystemScan()">
+        <div class="terminal-window">
+            <p class="line line-1">> Initializing system scan...</p>
+            <p class="line line-2">> Analyzing network integrity... OK</p>
+            <p class="line line-3">> Checking for vulnerabilities... 0 found.</p>
+            <p class="line line-4">> System scan complete. No threats detected.</p>
+            <p class="close-info">[ Кликните в любом месте, чтобы закрыть ]</p>
+        </div>
+    </div>
+
+    <!-- СКРЫТЫЙ ЭКРАН ФИНАЛЬНЫХ ТИТРОВ -->
+    <div id="credits-modal" class="modal">
+        <div class="credits-content">
+            <button class="close-button" onclick="hideCredits()">×</button>
+            <div class="credits-scroll">
+                <div class="credits-section">
+                    <h2>I. ГЛАВНОЕ УПРАВЛЕНИЕ</h2>
+                    <p><span>Системный Архитектор</span>Hallow [Sarcastic Saint]</p>
+                    <p><span>Платформа</span>Linux, Docker, Nginx Proxy Manager</p>
+                    <p><span>Интерфейс</span>Dashy (Личный центр управления)</p>
+                </div>
+                <div class="credits-section">
+                    <h2>II. СПЕЦИАЛЬНОЕ ОБЕСПЕЧЕНИЕ</h2>
+                    <p><span>Управление Документацией</span>DokuWiki (База знаний)</p>
+                    <p><span>Учет Активов</span>Snipe-IT</p>
+                    <p><span>Удаленный Доступ</span>RustDesk (Self-Hosted)</p>
+                    <p><span>Безопасность данных</span>Vaultwarden (Менеджер паролей)</p>
+                </div>
+                <div class="credits-section">
+                    <h2>III. СИСТЕМНЫЙ АНАЛИЗ</h2>
+                    <p><span>Проактивный Контроль</span>Netdata, Uptime Kuma</p>
+                    <p><span>Контроль Изменений (IaC)</span>Gitea (Версионирование конфигураций)</p>
+                    <p><span>Аварийное Восстановление (DR)</span>BorgBackup (Резервные копии)</p>
+                </div>
+                <div class="credits-section">
+                    <h2>IV. КОМПЕТЕНЦИЯ</h2>
+                    <p><span>Системный Фундамент</span>Профильное образование (Диплом с отличием)</p>
+                    <p><span>Практический Опыт</span>Администрирование IT-систем</p>
+                </div>
+                <div class="credits-end">
+                    <pre>... Да пребудет с вами хоть что нибудь ...</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
